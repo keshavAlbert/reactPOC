@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en" data-critters-container>
+  <head>
+    <meta charset="utf-8">
+    <title>React in Angular POC</title>
+    <base href="/">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>
+      const env = (window.process && window.process.env) || {};
+      env.NODE_ENV = env.NODE_ENV || 'development';
+      const shim = window.process || {};
+      shim.env = env;
+      window.process = shim;
+      if (!('process' in globalThis)) {
+        // ensure module UMD bundles can access the shim through globalThis
+        globalThis.process = shim;
+      }
+    </script>
+  <style>body{margin:0;background:#f3f4f6;color:#111827;font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif}</style><link rel="stylesheet" href="styles.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="styles.css"></noscript></head>
+  <body>
+    <app-root></app-root>
+  <script src="runtime.js" type="module"></script><script src="polyfills.js" type="module"></script><script src="scripts.js" defer></script><script src="main.js" type="module"></script></body>
+</html>

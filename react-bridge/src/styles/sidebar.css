@@ -1,0 +1,10 @@
+:host {
+  display: block;
+  font: 14px/1.4 system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial;
+}
+.react-sidebar { padding: 8px 12px; border-right: 1px solid #e5e7eb; }
+.react-sidebar__heading { margin: 0 0 8px; font-size: 14px; font-weight: 600; }
+.react-sidebar__list { list-style: none; margin: 0; padding: 0; }
+.react-sidebar__item { display: block; width: 100%; text-align: left; padding: 8px; border-radius: 8px; border: 0; cursor: pointer; background: transparent; }
+.react-sidebar__item:hover { background: #f3f4f6; }
+.react-sidebar__item.is-active { background: #e5e7eb; font-weight: 600; }

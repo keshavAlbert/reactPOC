@@ -1,0 +1,1 @@
+{"ast":null,"code":"export const STORE_GLOBAL_KEY = '__reactBridgeSharedStore__';\nexport const STORE_READY_EVENT = 'react-bridge:store-ready';\nexport const STORE_CHANGE_EVENT = 'react-bridge:state-changed';","map":null,"metadata":{},"sourceType":"module","externalDependencies":[]}

@@ -1,0 +1,51 @@
+<div class="container">
+  <react-notebook-sidebar
+    heading="Notebook Sections"
+    [attr.items]="sidebarItems | json"
+    [attr.selected-id]="selectedId"
+    (sidebar-select)="onSidebarSelect($event)">
+  </react-notebook-sidebar>
+
+  <div class="content">
+    <header class="content__header">
+      <h1>Hybrid Workspace</h1>
+      <p>React elements and Angular components stay in sync through a shared state store.</p>
+    </header>
+
+    <section class="content__grid">
+      <div class="panel">
+        <h2 class="panel__title">React form element</h2>
+        <react-shared-form heading="Shared Note Editor"></react-shared-form>
+      </div>
+
+      <div class="panel">
+        <h2 class="panel__title">Angular controls</h2>
+        <label class="panel__label" for="angular-title">Title</label>
+        <input
+          id="angular-title"
+          class="panel__input"
+          [(ngModel)]="angularNoteTitle"
+          (ngModelChange)="onAngularTitleChange($event)"
+        />
+
+        <label class="panel__label" for="angular-description">Description</label>
+        <textarea
+          id="angular-description"
+          class="panel__textarea"
+          rows="5"
+          [(ngModel)]="angularNoteDescription"
+          (ngModelChange)="onAngularDescriptionChange($event)"></textarea>
+
+        <div class="panel__meta">
+          <span>Selected section: <strong>{{ sharedState?.selectedSection }}</strong></span>
+          <span>Last updated: {{ sharedState?.form.lastUpdated | date: 'shortTime' }}</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="content__state">
+      <h3>Store snapshot</h3>
+      <pre>{{ sharedState | json }}</pre>
+    </section>
+  </div>
+</div>

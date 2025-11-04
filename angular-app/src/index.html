@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>React in Angular POC</title>
+    <base href="/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script>
+      const env = (window.process && window.process.env) || {};
+      env.NODE_ENV = env.NODE_ENV || 'development';
+      const shim = window.process || {};
+      shim.env = env;
+      window.process = shim;
+      if (!('process' in globalThis)) {
+        // ensure module UMD bundles can access the shim through globalThis
+        globalThis.process = shim;
+      }
+    </script>
+  </head>
+  <body>
+    <app-root></app-root>
+  </body>
+</html>
