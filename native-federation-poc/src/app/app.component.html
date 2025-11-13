@@ -1,0 +1,28 @@
+<div class="app-header">
+  <h3 *ngIf="activeView === 'angular'">Worksheet MFE (Angular 20)</h3>
+  <h3 *ngIf="activeView === 'react'">Worksheet MFE (React 19)</h3>
+
+  <pre>ctx: {{ ctxSig() | json }}</pre>
+  <button (click)="tryShared()">Use Shared Lib</button>
+  <div>{{ status }}</div>
+</div>
+
+<hr />
+
+<div class="toggle-bar">
+  <button
+    class="toggle-btn"
+    [class.active]="activeView === 'angular'"
+    (click)="switchView('angular')"
+  >
+    Run AG Grid with Angular
+  </button>
+  <button class="toggle-btn" [class.active]="activeView === 'react'" (click)="switchView('react')">
+    Run AG Grid with React
+  </button>
+</div>
+
+<div class="demo-container">
+  <ag-grid-demo *ngIf="activeView === 'angular'"></ag-grid-demo>
+  <albert-worksheet-mfe-react *ngIf="activeView === 'react'"></albert-worksheet-mfe-react>
+</div>

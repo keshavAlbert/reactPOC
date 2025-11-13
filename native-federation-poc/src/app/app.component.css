@@ -1,0 +1,40 @@
+.app-header {
+  padding: 12px;
+  border: 1px solid #ccc;
+}
+
+.toggle-bar {
+  display: flex;
+  gap: 12px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  background: #fafafa;
+  margin-top: 8px;
+}
+
+.toggle-btn {
+  padding: 8px 16px;
+  border: 1px solid #bbb;
+  background: white;
+  cursor: pointer;
+  font-weight: 500;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.toggle-btn:hover {
+  background: #f0f0f0;
+}
+
+.toggle-btn.active {
+  background: #0078d4;
+  color: white;
+  border-color: #0078d4;
+}
+
+.demo-container {
+  padding: 12px;
+  border: 1px solid #ccc;
+  margin-top: 12px;
+  min-height: 400px;
+}
