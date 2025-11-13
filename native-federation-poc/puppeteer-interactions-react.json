@@ -1,0 +1,23 @@
+{
+  "Timestamp": "2025-11-04T10:34:34.019Z",
+  "RenderTimeMs": "2273.1",
+  "VerticalScrollMs": "75.8",
+  "HorizontalScrollMs": "267.4",
+  "ResizeMs": "30.7",
+  "DragMs": "20.9",
+  "Metrics": {
+    "Timestamp": 118355.780999,
+    "Documents": 2,
+    "Frames": 2,
+    "JSEventListeners": 10382,
+    "Nodes": 6082,
+    "LayoutCount": 57,
+    "RecalcStyleCount": 88,
+    "LayoutDuration": 0.032319,
+    "RecalcStyleDuration": 0.040126,
+    "ScriptDuration": 0.676045,
+    "TaskDuration": 0.840465,
+    "JSHeapUsedSize": 52778004,
+    "JSHeapTotalSize": 95223808
+  }
+}
